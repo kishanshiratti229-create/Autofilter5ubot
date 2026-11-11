@@ -80,18 +80,18 @@ Each help page contains a short list for easy reading.
 • Auto-update commands: /setupchat /movieupdates /getdlink /sendupnow /getlist"""
     ]
     ABOUT_TXT = """<b>
-◎ Cʀᴇᴀᴛᴏʀ: <a href=https://github.com/mntgxo> MN - TG</a>
+◎ Cʀᴇᴀᴛᴏʀ: <a href=https://t.me/KishanMS> PEACE TG</a>
 ◎ Lᴀɴɢᴜᴀɢᴇ: Pʏᴛʜᴏɴ 3
 ◎ Dᴀᴛᴀ Bᴀsᴇ: Mᴏɴɢᴏ DB
-◎ Bᴏᴛ Sᴇʀᴠᴇʀ: KoYeb</b>"""
+◎ Bᴏᴛ Sᴇʀᴠᴇʀ: Render</b>"""
     SOURCE_TXT = """<b>NOTE:</b>
-- Shobana Filter Bot  is a open source project. 
-- Source - <ahref=https://github.com/mn-bots/ShobanaFilterBot>Click Here to get source code</a>
+- AUTOFILTER4U Bot  is a open source project. 
+- Website - <ahref=https://tinyurl.com/Cinhub4u.gt.tc/>Click Here to get Movie Our Own Website</a>
 
 <b>DEVS:</b>
--<a href=https://github.com/mntg4u> MN - TG</a>"""
+-<a href=https://t.me/KishanMS>Peace Bro- TG</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
-- Filter is the feature were users can set automated replies for a particular keyword and shobana will respond whenever a keyword is found the message
+- Filter is the feature were users can set automated replies for a particular keyword and I will respond whenever a keyword is found the message
 <b>NOTE:</b>
 1. This Bot should have admin privillage.
 2. only admins can add filters in a chat.
@@ -112,7 +112,7 @@ Each help page contains a short list for easy reading.
 3. Buttons should be properly parsed as markdown format
 
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://github.com/mn-bots/ShobanaFilterBot)</code>
+<code>[Button Text](buttonurl:https://Cinhub4u.gt.tc/)</code>
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
