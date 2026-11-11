@@ -37,9 +37,9 @@ def parse_size_to_bytes(value: str, default: int = 0) -> int:
     return int(number * scale.get(unit, 1))
 #Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+API_ID = int(environ.get('API_ID', '24799187'))
+API_HASH = environ.get('API_HASH', '4baef40b8f24b66a25ccd232861186ed')
+BOT_TOKEN = environ.get('BOT_TOKEN', '9112714195:AAHV8FyuG2l26QbNYNlxRAdenZbq1p_sDIA')
 
 # Keep-Alive URL
 KEEP_ALIVE_URL = environ.get("KEEP_ALIVE_URL", "https://nutritious-evey-mnbots-c8b6564d.koyeb.app/")  # <-- Add this line
@@ -51,21 +51,21 @@ REQUEST_FSUB_MODE = bool(environ.get('REQUEST_FSUB_MODE', True))
 BOT_START_TIME = time()
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://graph.org/file/2ed90a79eb533d86f8a0f.jpg https://graph.org/file/a0da24dacf4b7bec376a3.jpg https://graph.org/file/457aa9d0e485925088be6.jpg https://graph.org/file/041f7b57c6950070ba16e.jpg https://graph.org/file/f36511f6042d74d95b5df.jpg https://graph.org/file/a30d30b3bc49bd8745533.jpg https://graph.org/file/ce71502cf614059ce1de5.jpg')).split()
+PICS = (environ.get('PICS', 'https://i.ibb.co/NdD7dvfn/11f780e1bdc0.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1892771262').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002490892111 -1002097504396 -1003157977363 -1003034885508').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5000162773').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP')
-DEFAULT_AUTH_CHANNELS = [int(x) for x in environ.get("AUTH_CHANNEL", "").split() if x.lstrip('-').isdigit()]
+DEFAULT_AUTH_CHANNELS = [int(x) for x in environ.get("AUTH_CHANNEL", "-1003793009735").split() if x.lstrip('-').isdigit()]
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'mn_files')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://kishanshiratti229_db_user:yfZlxgMTwtD5Pm2i@cinhub4u.fe0zi4f.mongodb.net/")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cinhub4u")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Cinhub4u_Files')
 DATABASE_URI2 = environ.get('DATABASE_URI2', "")
 DATABASE_URI3 = environ.get('DATABASE_URI3', "")
 DATABASE_URI4 = environ.get('DATABASE_URI4', "")
@@ -78,7 +78,7 @@ POSTGRES_URI = environ.get('POSTGRES_URI', '')
 POSTGRES_STORAGE_LIMIT_BYTES = parse_size_to_bytes(environ.get('POSTGRES_STORAGE_LIMIT_BYTES', '1GB'), 0)
 
 # File Channel Settings
-FILE_CHANNELS = [int(ch) for ch in environ.get('FILE_CHANNELS', '-1002831639976 -1002607076908 -1002869981026').split()]
+FILE_CHANNELS = [int(ch) for ch in environ.get('FILE_CHANNELS', '-1003765093040 -1003745668648 -1004371488889').split()]
 FILE_CHANNEL_SENDING_MODE = is_enabled(environ.get('FILE_CHANNEL_SENDING_MODE', 'True'), False)
 FILE_AUTO_DELETE_SECONDS = int(environ.get('FILE_AUTO_DELETE_SECONDS', 60))  # Default: 1 minute
 
@@ -88,20 +88,19 @@ PM_SEARCH_GROUP_LINK = environ.get('PM_SEARCH_GROUP_LINK', 'https://t.me/MnMovie
 PM_SEARCH_REDIRECT_TEXT = environ.get(
     'PM_SEARCH_REDIRECT_TEXT',
     'Please ask/search movies in our groups.\n'
-    'സിനിമ / സീരീസ് തിരയാൻ ഞങ്ങളുടെ ഗ്രൂപ്പിൽ മെസേജ് അയക്കുക.\n\n'
-    '👇 Join / Open Group\n{group_link}'
+    '👇 Join / Open Group\n{https://t.me/Cinhub4uDisc}'
 )
 DELETE_USER_SEARCH_MESSAGE = is_enabled(environ.get('DELETE_USER_SEARCH_MESSAGE', 'False'), False)
 
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002345447637'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'mnbots_support')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1004389792638'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Cinhub4uSupport')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', 'False')), False)
 IMDB = is_enabled((environ.get('IMDB', 'False')), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', 'True')), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CUSTOM_FILE_CAPTION}") 
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "📂 <em>File Name</em>: <code>{file_name}</code>\n\n ♻ <em>File Size</em>:{file_size} \n\n <b><i>Latest Movies -</i> </b>")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "📂 <em>File Name</em>: <code>{file_name}</code>\n\n ♻ <em>File Size</em>:{file_size} \n\n <b><i>Latest Movies -</i>https://t.me/Cinhub4u</b>")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🏷 𝖳𝗂𝗍𝗅𝖾: <a href={url}>{title}</a> \n🔮 𝖸𝖾𝖺𝗋: {year} \n⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10 \n🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres}")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
